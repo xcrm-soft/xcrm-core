@@ -1,0 +1,19 @@
+.modal-backdrop {
+  display: none!important;
+}
+.modal {
+  .modal-header {
+    h3 {
+      color: #900;
+      display: block;
+      font-size: 1.17em;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+  top: 60px;
+}

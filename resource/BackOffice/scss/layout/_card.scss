@@ -1,0 +1,45 @@
+.main-content-card {
+  background: rgba(255,255,255, .65);
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+}
+
+.main-content-card > .card-body {padding: 15px}
+.main-content-card > .card-toolbar {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+
+  .card-toolbar-buttons {
+    flex-grow: 1;
+  }
+}
+
+.links-with-icon {
+
+  .links-box {
+    margin: 5px 0 15px 0;
+    a {
+      white-space: nowrap;
+      padding-right: 1.75em;
+      line-height: 1.75em;
+    }
+  }
+
+
+
+  .one-row-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: .25rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.border {
+      border-bottom: 1px solid;
+      border-image: linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,0) ) 100% 0%;
+    }
+  }
+}

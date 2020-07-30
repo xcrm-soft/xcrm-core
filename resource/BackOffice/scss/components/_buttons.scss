@@ -1,0 +1,107 @@
+.btn-default {
+  color: #333333;
+  background-color: #fff;
+}
+
+.btn-default:hover {
+  color: #333333;
+  background-color: #ececec;
+}
+
+.btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .btn-default.active.focus, .btn-default.active:focus, .btn-default:active.focus, .btn-default:active:focus {
+  color: #333333;
+  background-color: #ececec;
+}
+
+.btn-default .ink {
+  background-color: #e6e5e5;
+}
+
+.btn-default.pmd-btn-flat {
+  color: #fff;
+  background-color: transparent;
+}
+
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #4285f4;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1e6ef2;
+}
+
+.btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary:active.focus, .btn-primary:active:focus {
+  color: #fff;
+  background-color: #1e6ef2;
+}
+
+.btn-primary .ink {
+  background-color: #1266f1;
+}
+
+
+
+.btn-success {
+  color: #fff;
+  background-color: #259b24;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #1e7c1d;
+}
+
+.btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .btn-success.active.focus, .btn-success.active:focus, .btn-success:active.focus, .btn-success:active:focus {
+  color: #fff;
+  background-color: #1e7c1d;
+}
+
+.btn-success .ink {
+  background-color: #1b721a;
+}
+
+
+.btn-info {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #038fce;
+}
+
+.btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .btn-info.active.focus, .btn-info.active:focus, .btn-info:active.focus, .btn-info:active:focus {
+  color: #fff;
+  background-color: #038fce;
+}
+
+.btn-info .ink {
+  background-color: #0286c2;
+}
+
+
+
+
+.btn-warning {
+  color: #333333;
+  background-color: #ffc107;
+}
+
+.btn-warning:hover {
+  color: #333333;
+  background-color: #e0a800;
+}
+
+.btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .btn-warning.active.focus, .btn-warning.active:focus, .btn-warning:active.focus, .btn-warning:active:focus {
+  color: #333333;
+  background-color: #e0a800;
+}
+
+.btn-warning .ink {
+  background-color: #d39e00;
+}
