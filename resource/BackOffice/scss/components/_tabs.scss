@@ -1,0 +1,58 @@
+.card-tabs {
+  padding: 0 15px;
+}
+
+.nav-tabs, .nav-tabs * {
+  margin: 0;
+  padding-top: 0!important;
+  background: none!important;
+}
+
+.nav-tabs {
+  display: inline-flex;
+  width: 100%;
+  overflow-x: auto;
+  border-bottom: 2px solid #DDD;
+  -ms-overflow-style: none; /*// IE 10+*/
+  overflow: -moz-scrollbars-none;/*// Firefox*/}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+  border-width: 0;
+}
+
+.nav-tabs>li>a {
+  border: none;
+  color: #666;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li>a:hover {
+  border: none;
+  color: #4285F4 !important;
+  background: transparent;
+}
+.nav-tabs>li>a::after {
+  content: "";
+  background: #4285F4;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+.nav-tabs>li.active>a::after,
+.nav-tabs>li:hover>a::after {
+  transform: scale(1);
+}
+.tab-nav>li>a::after {
+  background: #21527d none repeat scroll 0% 0%;
+  color: #fff;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none; /*Safari and Chrome*/
+}
+
+

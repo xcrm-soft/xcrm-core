@@ -1,0 +1,46 @@
+{
+  "name": "xcrm-soft/xcrm-core",
+  "description": "XCRM Core Module",
+  "keywords": ["xcrm", "core module"],
+  "homepage": "http://xcrm-soft.ru/",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0",
+    "yiisoft/yii2": "^2.0",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+    "2amigos/yii2-usuario": "^1.5",
+    "2amigos/yii2-config-kit": "^1.0.3",
+    "kartik-v/yii2-tree-manager": "^1.1",
+    "ramsey/uuid": "^4.0",
+    "kartik-v/yii2-widget-fileinput": "^1.0",
+    "kartik-v/yii2-widget-select2": "^2.1",
+    "mihaildev/yii2-ckeditor": "^1.0",
+    "yiisoft/yii2-imagine": "^2.2",
+    "yiisoft/yii2-bootstrap4": "^2.0",
+    "dianakaal/date-picker-masked-widget": "*",
+    "kartik-v/yii2-widget-datepicker": "^1.4",
+    "himiklab/yii2-recaptcha-widget": "dev-master",
+    "smarty/smarty": "^3.1@dev",
+    "trntv/yii2-aceeditor": "dev-master"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "XCrm\\": "src"
+    }
+  }
+}

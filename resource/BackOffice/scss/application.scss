@@ -1,0 +1,228 @@
+$smallWidth: 55px;
+$wideWidth:  320px;
+$wideWidthInner:  280px;
+
+body {
+  background: url("../img/background.jpg") top left no-repeat;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+@import "layout/common";
+
+@import "layout/page-header";
+@import "layout/card";
+@import "layout/header";
+
+@import "components/tabs";
+@import "components/forms";
+@import "components/modal";
+@import "components/grid";
+@import "components/buttons";
+
+.navbar {
+  background: rgba(0,0,0,.85);
+  height: 50px;
+  position: fixed;
+  border: none;
+
+  li.active a{
+    background: none;
+  }
+
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+}
+
+.btn {
+  border-radius: 0;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+}
+
+.navbar .navbar-collapse, .navbar .navbar-form {
+  background: none;
+}
+
+.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus {
+  background: none;
+}
+
+#wrapper {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: $wideWidth;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  #menu-toggle {
+    position: absolute;
+
+    z-index: 3000;
+    right: 0;
+    width: 305px;
+    display: flex;
+    flex-direction: row;
+
+    background: rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(255,255,255, .5);
+    border-top: 1px solid rgba(255,255,255, .5);
+    color: #777;
+    text-decoration: none;
+    padding: 8px 0;
+
+    .title {
+      text-transform: uppercase;
+      flex-grow: 1;
+      padding-left: 15px;
+    }
+    .icon {
+      width: $smallWidth;
+      text-align: center;
+      font-size: 1.25em;
+    }
+  }
+}
+
+.only-opened {
+  //transition: height 0.25s ease-in-out;
+}
+
+#wrapper.toggled {
+  padding-left: 0;
+  .only-opened {
+    display: none;
+  }
+  .module-title-icon {
+    opacity: .5;
+  }
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: $wideWidth;
+  width: $wideWidth;
+  height: 100%;
+  margin-left: -$wideWidth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: url("../img/background.jpg") 0px -50px no-repeat;
+}
+
+#sidebar-keeper {
+  position: relative;
+  width: $wideWidth;
+  min-height: 100vh;
+  overflow-y: visible;
+  background: rgba(0,0,0,.75);
+  padding-top: 50px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: $smallWidth;
+  overflow-y: hidden;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+
+  //transition: all 0.1s ease;
+  margin-left: 0px;
+
+
+}
+
+#wrapper.toggled #page-content-wrapper {
+
+  position: relative;
+  margin-right: 0;
+  margin-left: $smallWidth;
+}
+
+#page-content-keeper {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  left: $smallWidth;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+
+  section.main {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, .85);
+  }
+  footer {
+    background: rgba(0, 0, 0, .85);
+  }
+}
+
+.side-menu-container {
+
+  .section-title {
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    color: rgba(255, 255, 255, .25);
+    text-transform: uppercase;
+    padding: 4px 15px;
+  }
+
+  .menu-module {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0,0,0,.35);
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 1.125em;
+
+    .module-icon {
+      width: $smallWidth;
+      text-align: center;
+      img {width:28px;}
+    }
+    .module-title {
+      color: #bbb;
+      white-space: nowrap;
+      flex-grow: 1;
+    }
+  }
+
+  .module-link {
+    a {
+      padding: 8px 0 8px 53px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      color: #999;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgba(255,255,255,.15);
+      }
+    }
+
+  }
+
+  .module-menu {
+    background: rgba(255,255,255,.05);
+    border-bottom: 1px solid #444;
+  }
+
+}
