@@ -177,25 +177,28 @@ class I18N extends \yii\i18n\I18N
 
     public function init()
     {
-
         try {
-            $this->_allLanguages = RefLanguages::find()->indexBy('key_name')->all();
+            $tableName = RefLanguages::getDb()->schema->getRawTableName(RefLanguages::tableName());
+            if (in_array($tableName, RefLanguages::getDb()->schema->tableNames)) {
+                $this->_allLanguages = RefLanguages::find()->indexBy('key_name')->all();
+            }
+            foreach (['xcrm*', 'site*', 'app*'] as $prefix) {
+                if (!isset($this->translations[$prefix])) $this->translations[$prefix] = [
+                    'class' => DbMessageSource::class,
+                    'db' => \Yii::$app->db,
+                    'sourceLanguage' => 'default',
+                    'sourceMessageTable' => $this->sourceMessageTable,
+                    'messageTable' => $this->messageTable,
+                    'on missingTranslation' => $this->missingTranslationHandler
+                ];
+            }
+
         } catch (\Exception $e) {
             $this->_allLanguages = ['en' => ['name' => 'English']];
         }
 
         if (!$this->_allLanguages) {
             $this->_allLanguages = ['en' => ['name' => 'English']];
-        }
-        foreach (['xcrm*', 'site*', 'app*'] as $prefix) {
-            if (!isset($this->translations[$prefix])) $this->translations[$prefix] = [
-                'class' => DbMessageSource::class,
-                'db' => \Yii::$app->db,
-                'sourceLanguage' => 'default',
-                'sourceMessageTable' => $this->sourceMessageTable,
-                'messageTable' => $this->messageTable,
-                'on missingTranslation' => $this->missingTranslationHandler
-            ];
         }
 
         parent::init();

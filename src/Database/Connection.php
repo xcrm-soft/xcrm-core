@@ -40,12 +40,15 @@ class Connection extends \yii\db\Connection
 
     public function describeTable($tableName, $skipAttributes = null)
     {
+
         $raw = $this->getSchema()->getRawTableName($tableName);
         if (!isset($this->_descriptions[$raw])) {
-            $this->_descriptions[$raw] = new TableDescriptionHelper($this->getSchema()->getTableSchema($tableName)->getColumnNames(), [
+
+            if ($schema = $this->getSchema()->getTableSchema($tableName))
+            $this->_descriptions[$raw] = new TableDescriptionHelper($schema->getColumnNames(), [
                 'skipAttributes' => $skipAttributes
             ]);
         }
-        return $this->_descriptions[$raw];
+        return $this->_descriptions[$raw] ?? null;
     }
 }
