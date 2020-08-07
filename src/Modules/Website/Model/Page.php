@@ -28,6 +28,10 @@ class Page extends ActiveRecordConfigurable
             'create' => [
                 'link'  => static::t('Добавить страницу'),
                 'title' => static::t('Добавление страницы'),
+            ],
+            'update' => [
+                'link'  => static::t('Редактировать страницу'),
+                'title' => static::t('Редактирование страницы'),
             ]
         ];
     }

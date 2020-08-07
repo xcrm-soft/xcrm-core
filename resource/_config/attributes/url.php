@@ -17,5 +17,9 @@ return [
             'class' => \XCrm\Data\Behavior\UrlBehavior::class,
             'urlAttribute' => 'url',
        ],
-    ]
+    ],
+
+    'label' => 'URL адрес',
+    'section' => 'main',
+    'order' => 20
 ];

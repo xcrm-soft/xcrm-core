@@ -19,6 +19,7 @@ use XCrm\I18N\Components\I18N;
 use XCrm\Modules\Email\Component\EmailManager;
 use XCrm\Modules\Smarty\Component\SmartyRenderer;
 use XCrm\Modules\User\Component\User;
+use XCrm\Modules\Website\Component\PageManager;
 use yii\rbac\DbManager;
 
 /**
@@ -31,6 +32,7 @@ use yii\rbac\DbManager;
  * @property-read ReferenceManager $referenceManager
  * @property-read SmartyRenderer $smarty
  * @property-read EmailManager $email
+ * @property-read PageManager $pageManager
  *
  * @package XCrm\Application
  * @author Alexey Volkov <webwizardry@hotmail.com>
@@ -48,7 +50,8 @@ trait ApplicationTrait
             'i18n' => ['class' => I18N::class],
             'urlManager' => ['class' => UrlManager::class],
             'smarty' => ['class' => SmartyRenderer::class],
-            'email' => ['class' => EmailManager::class]
+            'email' => ['class' => EmailManager::class],
+            'pageManager' => ['class' => PageManager::class]
         ];
     }
 

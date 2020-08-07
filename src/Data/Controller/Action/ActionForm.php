@@ -41,23 +41,20 @@ abstract class ActionForm extends ActionItem
         return ArrayHelper::merge(parent::getVariables(), [
             'media' => [
                 'title' => 'Медиа',
-                'attributes' => ['jacket_img', 'jacket_svg'],
+                'attributes' => $this->app->attributeManager->getSectionAttributes('media')
             ],
             'main' => [
                 'main' => [
                     'title' => 'Основная информация',
-                    'attributes' => ['parent_id', 'key_name', 'key_value', 'uuid', 'table_name', 'class_name',
-                        'order_id', 'name', 'url', 'is_active', 'is_primary', 'is_secondary',
-                        'email', 'email_name', 'email_reply', 'email_reply_name'
-                    ],
+                    'attributes' => $this->app->attributeManager->getSectionAttributes('main')
                 ],
                 'content' => [
                     'title' => 'Содержание страницы',
-                    'attributes' => ['heading', 'heading_level', 'content_short', 'content_full'],
+                    'attributes' => $this->app->attributeManager->getSectionAttributes('content')
                 ],
                 'seo' => [
-                    'title' => 'SEO',
-                    'attributes' => ['meta_title', 'meta_keywords', 'meta_description', 'jacket_img_alt', 'jacket_svg_alt'],
+                    'title' => 'SEO параметры',
+                    'attributes' => $this->app->attributeManager->getSectionAttributes('seo')
                 ],
             ]
         ]);

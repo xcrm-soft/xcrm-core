@@ -24,6 +24,14 @@ use yii\widgets\ActiveField;
 abstract class Attribute extends BaseObject
 {
     /**
+     * @var string раздел формы, в которой будет размещен атрибут
+     */
+    public $section = 'content';
+    /**
+     * @var int индекс порядкового номера атрибута в пределах секции
+     */
+    public $order = 100;
+    /**
      * @var string зарезервированное имя атрибута
      */
     public $name = null;

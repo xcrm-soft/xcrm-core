@@ -23,5 +23,5 @@ return [
             'createdAtAttribute' => 'created_at'
         ],
     ],
-    'i18n' => true
+    'section' => 'system',
 ];

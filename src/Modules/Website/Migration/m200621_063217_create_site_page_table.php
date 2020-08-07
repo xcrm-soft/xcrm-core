@@ -21,6 +21,7 @@ class m200621_063217_create_site_page_table extends \XCrm\Database\Migration\Mig
             'is_active',
             'is_top_menu_item',
             'is_sub_menu_item',
+            'layout',
             'url',
             'name',
             'jacket_img',

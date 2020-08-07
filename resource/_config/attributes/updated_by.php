@@ -23,5 +23,5 @@ return [
             'updatedByAttribute' => 'updated_by'
         ],
     ],
-    'i18n' => true
+    'section' => 'system',
 ];

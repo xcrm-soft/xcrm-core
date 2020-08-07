@@ -10,5 +10,7 @@
 use XCrm\Data\Attribute\Media\CutterAttribute;
 
 return [
+    'section' => 'media',
     'class' => CutterAttribute::class,
+    'label' => 'Изображение обложки'
 ];

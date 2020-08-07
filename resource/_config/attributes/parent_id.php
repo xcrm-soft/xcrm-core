@@ -8,5 +8,8 @@
  */
 
 return [
-    'class' => \XCrm\Data\Attribute\Special\ForeignKeyAttribute::class
+    'class' => \XCrm\Data\Attribute\Special\ForeignKeyAttribute::class,
+    'label' => 'Размещено в',
+    'section' => 'main',
+    'order' => 10
 ];

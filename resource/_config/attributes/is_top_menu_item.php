@@ -10,4 +10,5 @@
 return [
     'class' => \XCrm\Data\Attribute\Base\BooleanAttribute::class,
     'defaultValue' => 0,
+    'label' => 'В основном меню'
 ];

@@ -8,10 +8,6 @@
  */
 
 return [
-    'class' => \XCrm\Data\Attribute\Base\StringAttribute::class,
-    'notNull' => true,
-    'unique' => true,
-    'section' => 'main',
-    'label' => 'Строковый ключ',
-    'order' => 0
+    'class' => \XCrm\Data\Attribute\Base\DecimalAttribute::class,
+    'label' => 'Цена'
 ];

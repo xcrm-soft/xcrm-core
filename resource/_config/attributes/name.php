@@ -10,5 +10,8 @@
 return [
     'class' => \XCrm\Data\Attribute\Base\StringAttribute::class,
     'label' => 'Наименование',
-    'i18n'  => true
+    'i18n'  => true,
+
+    'section' => 'main',
+    'order' => 30
 ];

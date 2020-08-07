@@ -78,7 +78,7 @@ class TableDescriptionHelper extends BaseObject
      */
     public function getLabels()
     {
-        return $this->_labels ?? [];
+        return $this->app->attributeManager->labels;
     }
 
     public function isNestedSets()
@@ -108,10 +108,6 @@ class TableDescriptionHelper extends BaseObject
             $attribute = $this->app->attributeManager->get($column);
 
             $this->_attributes[] = $column;
-
-            if (isset($attribute->label)) {
-                $this->_labels[$column] = $attribute->label;
-            }
 
             $rules = $attribute->rules();
             foreach ($rules as $name=>$rule) {

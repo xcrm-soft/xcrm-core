@@ -6,14 +6,17 @@
  * @license   https://webwizardry.ru/projects/xcrm/license/
  * @copyright Copyright (c) 2020, Web Wizardry (http://webwizardry.ru)
  */
-use XCrm\Data\Attribute\Special\PrimaryKeyAttribute;
+
+namespace XCrm\Modules\Blocks\Model\Ref;
+use XCrm\Modules\Reference\Model\ReferenceBook;
 
 /**
- * Атрибут id зарезервирован как первичный ключ таблиц
+ * Реестр реализаций блоков
+ *
+ * @package XCrm\Modules\Blocks\Model\Ref
  * @author Alexey Volkov <webwizardry@hotmail.com>
  */
-return [
-    'class' => PrimaryKeyAttribute::class,
-    'label' => 'ID',
-    'section' => 'system'
-];
+class RefBlocksRegistry extends ReferenceBook
+{
+    
+}

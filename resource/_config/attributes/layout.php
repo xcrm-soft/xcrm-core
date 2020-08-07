@@ -7,14 +7,11 @@
  * @copyright Copyright (c) 2020, Web Wizardry (http://webwizardry.ru)
  */
 
-namespace XCrm\Application\Web;
-use XCrm\Application\Base\Component;
-
-class PageManager extends Component
-{
-
-    public function __construct($config = [])
+return [
+    'class' => \XCrm\Data\Attribute\Base\StringDropDownAttribute::class,
+    'label' => 'Макет страницы',
+    'dropDownData' => function()
     {
-        parent::__construct($config);
+        return Yii::$app->pageManager->availableLayouts;
     }
-}
+];

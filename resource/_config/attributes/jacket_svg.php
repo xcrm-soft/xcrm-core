@@ -9,5 +9,8 @@
 use XCrm\Data\Attribute\Media\ImageAttribute;
 
 return [
+    'section' => 'media',
+    'order' => 50,
     'class' => ImageAttribute::class,
+    'label' => 'SVG иконка'
 ];

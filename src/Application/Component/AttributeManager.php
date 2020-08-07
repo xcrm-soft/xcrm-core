@@ -28,6 +28,9 @@ class AttributeManager extends Component
      */
     protected $attributesMap = null;
 
+    protected $formSections = [];
+
+    public $labels;
 
     /**
      * Возарщает объект определения атрибута
@@ -74,7 +77,28 @@ class AttributeManager extends Component
 
         $this->attributesMap = [];
         $map = ArrayHelper::merge($this->loadCoreAttributes(), $this->loadRepositoryAttributes());
-        foreach ($map as $name => $config) $this->attributesMap[$name] = Yii::createObject(array_merge($config, ['name' => $name]));
+        foreach ($map as $name => $config) {
+            $this->attributesMap[$name] = $attr = Yii::createObject(array_merge([
+                'section' => 'content',
+                'order' => 100,
+            ], $config, ['name' => $name]));
+
+            /** @var Attribute $attr */
+            $this->formSections[$attr->section][$name] = $attr->order;
+            $this->labels[$name] = $attr->label ?? $name;
+        }
+
+        foreach ($this->formSections as $section=>$attributes) {
+            asort($this->formSections[$section]);
+        }
+    }
+
+    public function getSectionAttributes($sectionName)
+    {
+        if (isset($this->formSections[$sectionName])) {
+            return array_keys($this->formSections[$sectionName]);
+        }
+        return [];
     }
 
     /**

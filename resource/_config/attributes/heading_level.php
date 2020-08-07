@@ -9,4 +9,6 @@
 
 return [
     'class' => \XCrm\Data\Attribute\Base\StringAttribute::class,
+    'order' => 2,
+    'label' => 'Уровень заголовка'
 ];

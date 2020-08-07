@@ -17,6 +17,7 @@ class m200712_135624_create_index_page extends Migration
             'heading' => 'Главная страница',
             'meta_title' => 'Главная страница',
             'url' => '/',
+            'layout' => '//index',
             'is_active' => 1,
         ]))->makeRoot();
     }

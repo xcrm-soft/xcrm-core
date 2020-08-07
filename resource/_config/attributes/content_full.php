@@ -10,5 +10,7 @@
 return [
     'class' => \XCrm\Data\Attribute\Base\TextAttribute::class,
     'enableEditor' => true,
-    'i18n' => true
+    'i18n' => true,
+    'order' => 60,
+    'label' => 'Полное содержание'
 ];

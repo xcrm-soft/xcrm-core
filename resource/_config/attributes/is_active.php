@@ -10,4 +10,8 @@
 return [
     'class' => \XCrm\Data\Attribute\Base\BooleanAttribute::class,
     'defaultValue' => 1,
+
+    'label' => 'Статус',
+    'section' => 'main',
+    'order' => 110
 ];

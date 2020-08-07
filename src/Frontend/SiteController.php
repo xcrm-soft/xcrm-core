@@ -81,6 +81,7 @@ class SiteController extends Controller
 
     public function meta($model)
     {
+        $this->layout = $model->layout ?? $this->app->pageManager->defaultLayout;
         $this->app->view->meta($model);
     }
 }

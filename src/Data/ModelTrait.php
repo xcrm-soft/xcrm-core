@@ -26,7 +26,16 @@ trait ModelTrait
      */
     public static function actionLabels()
     {
-        return [];
+        return [
+            'create' => [
+                'link'  => static::t('Добавить запись'),
+                'title' => static::t('Добавление записи'),
+            ],
+            'update' => [
+                'link'  => static::t('Редактировать'),
+                'title' => static::t('Редактирование записи'),
+            ]
+        ];
     }
 
     /**

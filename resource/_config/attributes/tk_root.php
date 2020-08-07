@@ -14,7 +14,7 @@ return [
     'class' => \XCrm\Data\Attribute\Special\NestedSetsKeyAttribute::class,
     'notNull' => true,
     'defaultValue' => 0,
-
+    'section' => 'system',
     'behaviors' => [
         'tableType' => [
             'class' => NestedSetsBehavior::class,

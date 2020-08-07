@@ -8,6 +8,7 @@
  */
 
 return [
+    'section' => 'main',
     'class' => \XCrm\Data\Attribute\Base\StringAttribute::class,
     'notNull' => true,
     'unique' => true

@@ -9,5 +9,8 @@
 
 return [
     'class' => \XCrm\Data\Attribute\Base\StringAttribute::class,
-    'i18n' => true
+    'i18n' => true,
+    'section' => 'seo',
+    'label' => 'Тайтл страницы',
+    'order' => 10
 ];

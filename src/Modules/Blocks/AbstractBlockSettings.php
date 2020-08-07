@@ -6,14 +6,16 @@
  * @license   https://webwizardry.ru/projects/xcrm/license/
  * @copyright Copyright (c) 2020, Web Wizardry (http://webwizardry.ru)
  */
-use XCrm\Data\Attribute\Special\PrimaryKeyAttribute;
+
+namespace XCrm\Modules\Blocks;
+use XCrm\Data\Model;
 
 /**
- * Атрибут id зарезервирован как первичный ключ таблиц
+ * Базовая реализация параметров блока контента
+ *
+ * @package XCrm\Modules\Blocks
  * @author Alexey Volkov <webwizardry@hotmail.com>
  */
-return [
-    'class' => PrimaryKeyAttribute::class,
-    'label' => 'ID',
-    'section' => 'system'
-];
+abstract class AbstractBlockSettings extends Model
+{
+}

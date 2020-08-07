@@ -23,5 +23,5 @@ return [
             'createdByAttribute' => 'created_by'
         ],
     ],
-    'i18n' => true
+    'section' => 'system',
 ];

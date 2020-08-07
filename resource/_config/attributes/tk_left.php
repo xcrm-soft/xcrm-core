@@ -13,7 +13,7 @@ use XCrm\Data\Behavior\NestedSetsBehavior;
 return [
     'class' => \XCrm\Data\Attribute\Special\NestedSetsKeyAttribute::class,
     'notNull' => true,
-
+    'section' => 'system',
     'behaviors' => [
         'tableType' => [
             'class' => NestedSetsBehavior::class,

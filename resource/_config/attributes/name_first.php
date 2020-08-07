@@ -9,9 +9,9 @@
 
 return [
     'class' => \XCrm\Data\Attribute\Base\StringAttribute::class,
-    'notNull' => true,
-    'unique' => true,
+    'label' => 'Имя',
+    'i18n'  => true,
+
     'section' => 'main',
-    'label' => 'Строковый ключ',
-    'order' => 0
+    'order' => 30
 ];
